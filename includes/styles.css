@@ -1,0 +1,206 @@
+
+html {
+    background-color: #424242;
+}
+
+nav {
+    background-color: #646A9B;
+    color: white;
+}
+
+a.nav-link, a.navbar-brand {
+    color: white; 
+}
+section {
+    background-color: #212f99;
+    width: 100vw;
+}
+
+footer {
+    background-color: #646A9B;
+    color: white;
+}
+
+.footer-text {
+    color: white;
+}
+
+.card-body {
+    color: white;
+    height: 10%;
+}
+
+#className, #classInfo {
+    color: white;
+}
+
+.card {
+    margin-bottom: 5px;
+    border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+iframe {
+    display: flex;
+}
+
+#classesHolder {
+    width: 20vw;
+}
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  } 
+
+  #rightColumn {
+    border: #eee;
+    border-style: solid;
+    padding-bottom: 10px;
+    width: 18vw;
+  }
+
+  .middleColumn {
+    
+  }
+
+  #classListTitle {
+    color: white;
+  }
+
+  #addClass {
+    color: white;
+    background-color: rgb(12, 47, 47);
+    width: 50%;
+    border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    text-align: center;
+
+  }
+
+  #classListTitle {
+    
+  }
+
+  #deleteTask {
+    color: white;
+    width: 30%;
+    margin-left: 70%;
+    text-align: center;
+    border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: rgb(85, 11, 11);
+  }
+
+  #taskCard {
+    color: white;
+    background-color: rgb(144, 84, 5);
+    border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+  }
+
+  iframe {
+    margin-right: 20px;
+  }
+
+  br {
+    display: block;
+    margin: 10px 0;
+    line-height:22px;
+ }
+
+ .ui-accordion-header.ui-state-active { 
+  background-color: rgb(56, 128, 58);
+  color: white; 
+}
+#note {
+  background-color: orangered;
+  height: 90%;
+  margin-left: 10px;
+  color: white;
+}
+
+#week {
+  height: 20%;
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#weekNumber {
+  background-color: rgb(17, 71, 188);
+  height: 30%;
+  color: white;
+  text-align: center;
+}
+
+#content {
+  background-color: rgb(104, 104, 104);
+}
+
+#notesDisplay {
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#notesPage {
+
+  width: 100%;
+  height: 250px;
+  background-color: rgb(56, 28, 158);
+
+}
+
+.textField {
+  color: white;
+  height: 80%;
+  width: 90%;
+  background-color: rgb(33, 24, 24);
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+form {
+  height: 700px;
+}
+
+select {
+  height: 40px;
+}
+
+pre {
+  color: white;
+}

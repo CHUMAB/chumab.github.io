@@ -1,0 +1,239 @@
+ 	
+
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+ 
+ 
+<nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <a class="navbar-brand" href="#">CAM WEBSITE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-1/index.html">Link 1 - Nothing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../lab-2/index.html">Link 2 - Nothing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../lab-3/index.html">Link 3 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-4/index.html">Link 4 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-5/index.html">Link 5 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-6/index.html">Link 6 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-7/index.html">Link 7 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-8/index.html">Link 8 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../lab-9/index.html">Link 9 - Nothing</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../Project/">Project</a>
+        </li>
+      </ul>
+      <!-- <span class="navbar-text">
+        Navbar text with an inline element
+      </span> -->
+    </div>
+  </nav>
+<section>
+
+<div class="row align-items-start">
+
+<div id="classesHolder" class="col-2 sortable-list">
+
+<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(116, 13, 13);" draggable="true">
+<div class="card-body">
+  <h5 class="card-title" id="className">Class1</h5>
+  <p class="card-text" id="classInfo">Quick Info</p>
+  <a href="#" class="btn btn-primary" id="notesAdd1">NotesEtc</a>
+</div>
+</div>
+
+<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(22, 9, 96);" draggable="true">
+<div class="card-body">
+  <h5 class="card-title" id="className">Class2</h5>
+  <p class="card-text" id="classInfo">Quick Info</p>
+  <a href="#" class="btn btn-primary">NotesEtc</a>
+</div>
+</div>
+
+<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(59, 132, 149);" draggable="true">
+<div class="card-body">
+  <h5 class="card-title" id="className">Class3</h5>
+  <p class="card-text" id="classInfo">Quick Info</p>
+  <a href="#" class="btn btn-primary">NotesEtc</a>
+</div>
+</div>
+
+<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(3, 101, 139);" draggable="true">
+<div class="card-body">
+  <h5 class="card-title" id="className">Class4</h5>
+  <p class="card-text" id="classInfo">Quick Info</p>
+  <a href="#" class="btn btn-primary">NotesEtc</a>
+</div>
+</div>
+
+<div class="card sortable-item border-light" style="width: 18rem;  background-color: rgb(176, 129, 11);" draggable="true">
+<div class="card-body">
+  <h5 class="card-title" id="className">Class5</h5>
+  <p class="card-text" id="classInfo">Quick Info</p>
+  <a href="#" class="btn btn-primary">NotesEtc</a>
+</div>
+</div>
+
+</div><!--classes holder-->
+
+
+
+<div id="accordion" class="middleColumn">
+<button type="button" class="collapsible">Calendar</button>
+<div class="content">
+<!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showPrint=0&src=Y2FtLndhdHQwN0BnbWFpbC5jb20&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+</div>
+<button type="button" class="collapsible">Note Writing</button> 
+<div class="content">
+<textarea id="notes1"></textarea>
+<button id="notes1Submit">SUBMIT</button>
+<p id="notes1Home"></p>
+<!-- <iframe src="https://docs.google.com/document/d/1PCV19Z9epixjlP2oC7PZhEpHExcgqyMjLhBMEGAstvY/edit?tab=t.0" width="825" height="718" frameborder="0" marginheight="0" marginwidth="0" embedded="true">Loading…</iframe> -->
+
+</div>
+
+<button type="button" class="collapsible">Note Storage</button> 
+<div class="content">
+<div id="notes1Storage"></div>
+
+</div>
+</div>
+
+
+
+<div id="rightColumn" class="col-3">
+<h2 id="classListTitle">TASK LIST</h2>
+<h3 id="addClass">ADD TASK</h3>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top fixed-bottom">
+      <div class="col-md-4 d-flex align-items-center footer-text">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary footer-span">Very cool</span>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  </body>
+
+ 
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="includes/script.js"></script>
+ 
+</body></html>
