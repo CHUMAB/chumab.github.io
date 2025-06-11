@@ -107,6 +107,13 @@ $("#addClass").click(function() {
           } else {
             console.log("Key already exists");
           }
+    let req = new XMLHttpRequest();
+
+          req.open("POST", "https://turquoise-jeniffer-59.tiiny.site/json/SaveData", true);
+          console.log(1);
+          req.setRequestHeader('Content-Type', 'application/json');
+          req.send('{"sample": "Hello World"}');
+
     }
 
     

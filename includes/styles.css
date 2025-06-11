@@ -128,8 +128,9 @@ iframe {
   }
 
   iframe {
-    margin-right: 20px;
-  }
+    width: 90%;
+    height: 100vh;
+}
 
   br {
     display: block;
