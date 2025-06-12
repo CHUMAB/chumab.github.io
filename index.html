@@ -74,7 +74,7 @@
 
 <div id="classesHolder" class="col-2 sortable-list">
 
-<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(116, 13, 13);" draggable="true">
+<div id="class1Click" class="card sortable-item border-light" style="width: 18rem; background-color: rgb(116, 13, 13);" draggable="true">
   <div class="card-body">
     <h5 class="card-title" id="className">Class1</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
@@ -83,7 +83,7 @@
 </div>
 
 
-<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(192, 83, 176);" draggable="true">
+<div id="class2Click" class="card sortable-item border-light" style="width: 18rem; background-color: rgb(192, 83, 176);" draggable="true">
   <div class="card-body">
     <h5 class="card-title" id="className">Class2</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
@@ -92,7 +92,7 @@
 </div>
 
 
-<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(59, 132, 149);" draggable="true">
+<div id="class3Click" class="card sortable-item border-light" style="width: 18rem; background-color: rgb(59, 132, 149);" draggable="true">
   <div class="card-body">
     <h5 class="card-title" id="className">Class3</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
@@ -100,7 +100,7 @@
   </div>
 </div>
 
-<div class="card sortable-item border-light" style="width: 18rem; background-color: rgb(3, 101, 139);" draggable="true">
+<div id="class4Click" class="card sortable-item border-light" style="width: 18rem; background-color: rgb(3, 101, 139);" draggable="true">
   <div class="card-body">
     <h5 class="card-title" id="className">Class4</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
@@ -108,7 +108,7 @@
   </div>
 </div>
 
-<div class="card sortable-item border-light" style="width: 18rem;  background-color: rgb(176, 129, 11);" draggable="true">
+<div id="class5Click" class="card sortable-item border-light" style="width: 18rem;  background-color: rgb(176, 129, 11);" draggable="true">
   <div class="card-body">
     <h5 class="card-title" id="className">Class5</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
@@ -121,38 +121,104 @@
 
 
 <div id="accordion" class="middleColumn col-7">
-  <div>Calendar</div>
+  <div class="middleColumn">Calendar</div>
 <div class="content">
   <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showPrint=0&src=Y2FtLndhdHQwN0BnbWFpbC5jb20&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
-<div class="middleColumn" id="accordion">Note Writing</div> 
-<div class="content">
-  <iframe src="https://docs.google.com/document/d/1PCV19Z9epixjlP2oC7PZhEpHExcgqyMjLhBMEGAstvY/edit?usp=sharing"></iframe>
-</div>
-<div class="content">
-  <iframe src="https://docs.google.com/document/d/1MS5XrN5s88pLFqu1VCdpKscENPvptRVLFI5ve5PWLVM/edit?tab=t.0"></iframe>
+<div class="middleColumn" id="">Note Writing</div> 
+<div id="notesHolder" class="content">
+  <div id="class1" style="display: none;">
+    <iframe src="https://docs.google.com/document/d/1MS5XrN5s88pLFqu1VCdpKscENPvptRVLFI5ve5PWLVM/edit?usp=sharing"></iframe>    
+  </div>
+  <div id="class2" style="display: none;">
+    <iframe src="https://docs.google.com/document/d/1VHqWWX_-Ecl6FWZhG0ZrbeZIrYTLxEGbkFPHLfe0MvI/edit?usp=sharing" ></iframe>
+  </div>
+  <div id="class3" style="display: none;">
+    <iframe src="https://docs.google.com/document/d/1a1bgUNRqvRT9Fh7LdXdswz2x1G3ICYvwinVr0Uea5vY/edit?usp=sharing" ></iframe>
+  </div>
+  <div id="class4" style="display: none;">
+    <iframe src="https://docs.google.com/document/d/1SLOvSfCyFxsr59-05xpFGQK2ew6qauei3z8eaAGZ0PY/edit?usp=sharing" ></iframe>
+  </div>
+  <div id="class5" style="display: none;">
+    <iframe src="https://docs.google.com/document/d/1p_gW5A7swJk-L5elW2AdeeG5g-IpZvAj_EoLJ92eUKY/edit?usp=sharing" ></iframe>
+  </div>
+
 </div>
 
-<div class="middleColumn notes1Storage" id="accordion">Note Storage</div> 
-<div id="content" class="g-1">
-  <div id="week1" class="row week1 g-1"> 
-    <h4 id="weekNumber" class="col-1 mx-1">W-1</h4>
-    <div id="note" class="col-2"><h5>NOTE NAME</h5><p>Content Overview Goes Here</p></div>
-    <div id="note" class="col-2"></div>
-    <div id="note" class="col-2"></div>
-    <div id="note" class="col-2"></div>
-    <div id="note" class="col-2"></div>
+
+<div class="middleColumn syllabus">Syllabus Land</div> 
+<div id="syllabusHolder" class="content">
+  <div id="syllabus1" style="display: none;">
+    <object id="syllabus" data="testSyllabus.pdf"></object>
   </div>
-  <div id="notesDisplay" class="row g-1">
-    <div id="notesPage" class="col-10">
-      <pre id="notePaste"></pre>
-    </div>
+  <div id="syllabus2" style="display: none;">
+    <object id="syllabus" data="testSyllabus.pdf"></object>
   </div>
-  <div id="week2" class="row week2 g-1">
-    <h4 id="" class="col-1 mx-1">WEEK 1</h4>
-    
+  <div id="syllabus3" style="display: none;">
+    <object id="syllabus" data="testSyllabus.pdf"></object>
   </div>
-</div>
+  <div id="syllabus4" style="display: none;">
+    <object id="syllabus" data="testSyllabus.pdf"></object>
+  </div>
+  <div id="syllabus5" style="display: none;">
+    <object id="syllabus" data="testSyllabus.pdf"></object>
+  </div>
+  </div>
+
+  <div class="middleColumn grades">Grades</div>
+   <div id="gradesHolder" class="content">
+    <h1 id="className">CLASS NAME</h1>
+
+    <form id="grades1">
+      
+      <div  class="row"  id="row1">
+        <label for="desc1">labs</label>
+        <input class="col-5" id="desc1" placeholder="Enter Current Percent" type="number">
+        <h4 class="col-3" id="desc1Total">12</h4>
+        <h4 class="col-3" id="desc1Weight">20%</h4>
+      </div>
+      <div  class="row"  id="row2">
+        <label for="desc2">assignments</label>
+        <input class="col-5" id="desc2" placeholder="Enter Current Percent" type="number">
+        <h4 class="col-3" id="desc2Total"></h4>
+        <h4 class="col-3" id="desc2Weight">20%</h4>
+      </div>
+      <div  class="row"  id="row3">
+        <label for="desc3">quizzes</label>
+        <input class="col-5" id="desc3" placeholder="Enter Current Percent" type="number">
+        <h4 class="col-3" id="desc3Total"></h4>
+        <h4 class="col-3" id="desc3Weight">5%</h4>
+      </div>
+      <div  class="row"  id="row4">
+        <label for="desc4">participation</label>
+        <input class="col-5" id="desc4" placeholder="Enter Current Percent" type="number">
+        <h4 class="col-3" id="desc4Total"></h4>
+        <h4 class="col-3" id="desc4Weight">5%</h4>
+      </div>
+      <div  class="row"  id="row5">
+        <label for="desc2">final</label>
+        <input class="col-5" id="desc5" placeholder="Enter Current Percent" type="number">
+        <h4 class="col-3" id="desc5Total"></h4>
+        <h4 class="col-3" id="desc5Weight">50%</h4>
+      </div>
+      <h3 id="currentGrade"></h3>
+      <h4 id="lastUpdated"></h4>
+        
+      
+      
+      <button id="gradeSubmit1" type="submit">SUBMIT</button>
+
+
+
+
+
+    </form>
+
+
+
+   </div>
+
+
 </div>
 
     
@@ -167,15 +233,10 @@
 <div id="rightColumn" class="col-3">
 <h2 id="classListTitle">TASK LIST</h2>
 <h3 id="addClass">ADD TASK</h3>
-  
-  </div>
-</div>
-</div>
-</div>
-</div>
 </div>
 
 </div>
+
 
 
 

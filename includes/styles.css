@@ -42,10 +42,7 @@ footer {
     border-radius: 5px;
 }
 
-iframe {
-    width: 90%;
-    height: 100vh;
-}
+
 
 #classesHolder {
     width: 20vw;
@@ -84,7 +81,15 @@ iframe {
   }
 
   .middleColumn {
-    
+    border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px
+
   }
 
   #classListTitle {
@@ -129,9 +134,13 @@ iframe {
   }
 
   iframe {
-    width: 90%;
+    width: 100%;
     height: 100vh;
-}
+    border: #000000;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;  
+  }
 
   br {
     display: block;
@@ -142,7 +151,21 @@ iframe {
  .ui-accordion-header.ui-state-active { 
   background-color: rgb(56, 128, 58);
   color: white; 
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
 }
+
+.ui-accordion-header {
+  background-color: rgb(49, 48, 48);
+  color: white; 
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
 #note {
   background-color: orangered;
   height: 90%;
@@ -205,4 +228,33 @@ select {
 
 pre {
   color: white;
+}
+
+#class1 {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notesHolder {
+  border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#syllabusHolder {
+   border: #eee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+#syllabus {
+  width: 100%;
+    height: 100vh;
+    border: #000000;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px; 
 }

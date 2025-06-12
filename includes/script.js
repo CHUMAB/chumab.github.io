@@ -266,13 +266,7 @@ $(".textField").on("keydown", function(event) {
 
   }
 })
-
-
-
-
-
-
-
+//code for textfield formatting currently useless
 
 
 const list = document.querySelector('.sortable-list');
@@ -317,4 +311,147 @@ const list = document.querySelector('.sortable-list');
       }
     }, { offset: Number.NEGATIVE_INFINITY }).element;
   }
+
+toggleNotes = () => {
+  $("#class1").toggle();
+  $("#class2").toggle();
+
+}
+
+$("#class1Click").on("click", function() {
+  $("#class1").show();
+  $("#class2").hide();
+  $("#class3").hide();
+  $("#class4").hide();
+  $("#class5").hide();
+
+  $("#notesHolder").css("background-color", "rgb(116, 13, 13)");
+  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(116, 13, 13)");
+  $(".middleColumn").css("background-color", "rgb(116, 13, 13)");
+
+  $("#syllabus1").show();
+  $("#syllabus2").hide();
+  $("#syllabus3").hide();
+  $("#syllabus4").hide();
+  $("#syllabus5").hide();
 })
+
+$("#class2Click").on("click", function() {
+  $("#class1").hide();
+  $("#class2").show();
+  $("#class3").hide();
+  $("#class4").hide();
+  $("#class5").hide();
+
+  $("#notesHolder").css("background-color", "rgb(192, 83, 176)");
+  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(192, 83, 176)");
+  $(".middleColumn").css("background-color", "rgb(192, 83, 176)");
+
+  $("#syllabus1").show();
+  $("#syllabus2").hide();
+  $("#syllabus3").hide();
+  $("#syllabus4").hide();
+  $("#syllabus5").hide();
+
+})
+
+$("#class3Click").on("click", function() {
+  $("#class1").hide();
+  $("#class2").hide();
+  $("#class3").show();
+  $("#class4").hide();
+  $("#class5").hide();
+
+  $("#notesHolder").css("background-color", "rgb(59, 132, 149)");
+  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(59, 132, 149)");
+  $(".middleColumn").css("background-color", "rgb(59, 132, 149)");
+
+  $("#syllabus1").show();
+  $("#syllabus2").hide();
+  $("#syllabus3").hide();
+  $("#syllabus4").hide();
+  $("#syllabus5").hide();
+
+})
+
+$("#class4Click").on("click", function() {
+  $("#class1").hide();
+  $("#class2").hide();
+  $("#class3").hide();
+  $("#class4").show();
+  $("#class5").hide();
+
+  $("#notesHolder").css("background-color", "rgb(3, 101, 139)");
+  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(3, 101, 139)");
+  $(".middleColumn").css("background-color", "rgb(3, 101, 139)");
+
+  $("#syllabus1").show();
+  $("#syllabus2").hide();
+  $("#syllabus3").hide();
+  $("#syllabus4").hide();
+  $("#syllabus5").hide();
+
+})
+
+$("#class5Click").on("click", function() {
+  $("#class1").hide();
+  $("#class2").hide();
+  $("#class3").hide();
+  $("#class4").hide();
+  $("#class5").show();
+
+  $("#notesHolder").css("background-color", "rgb(176, 129, 11)");
+  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(176, 129, 11)");
+  $(".middleColumn").css("background-color", "rgb(176, 129, 11)");
+
+  $("#syllabus1").show();
+  $("#syllabus2").hide();
+  $("#syllabus3").hide();
+  $("#syllabus4").hide();
+  $("#syllabus5").hide();
+
+})
+
+$("#gradeSubmit1").on("click", function() {
+
+
+  
+
+  val1 = $("#desc1").val();
+  val2 = $("#desc2").val();
+  val3 = $("#desc3").val();
+  val4 = $("#desc4").val();
+  val5 = $("#desc5").val();
+
+  $("#desc1Total").text(val1);
+  $("#desc2Total").text(val2);
+  $("#desc3Total").text(val3);
+  $("#desc4Total").text(val4);
+  $("#desc5Total").text(val5);
+
+  $("#desc1").addClass(val1);
+  $("#desc2").addClass(val2);
+  $("#desc3").addClass(val3);
+  $("#desc4").addClass(val4);
+  $("#desc5").addClass(val5);
+
+currentGrade = parseInt(val1) + parseInt(val2) + parseInt(val3) + parseInt(val4) + parseInt(val5);
+
+  $("#currentGrade").text(currentGrade);
+
+ const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+   var d = new Date();
+  var strDate = (monthNames[d.getMonth()]) + " / " + d.getDate();
+  var time = d.toLocaleTimeString();
+  var dAndt = (strDate +` / `+ time);
+  console.log(dAndt);
+
+  $("#lastUpdated").text(`Last Updated: `+dAndt);
+
+})
+
+
+})
+
