@@ -95,6 +95,29 @@ $("#addClass").click(function() {
         if (localStorage.getItem(randomNum) === null) {//if there is no key by that number it adds a task
     
             localStorage.setItem(randomNum, taskName);
+
+            
+    console.log("pressed");
+
+            fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts",
+            {
+                method: "POST",
+                body: JSON
+                .stringify
+                ({
+                  
+                  "id": taskName,
+                  "title": randomNum,
+                  "author": "Cam"
+
+                }),
+                headers: {
+                  "Content-type": "application/json",
+                },
+              })
+                .then((response) => response.json())
+                .then((json) => console.log(json));     
+        
     
             // $("#taskName").text(taskName);
     
@@ -103,18 +126,23 @@ $("#addClass").click(function() {
                   <h5 class="card-title"  id="taskName">`+ taskName +`</h5>
                   <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ randomNum +`</label></p>
                 </div>`);
+
+                
     
           } else {
             console.log("Key already exists");
           }
-    let req = new XMLHttpRequest();
 
-          req.open("POST", "https://turquoise-jeniffer-59.tiiny.site/json/SaveData", true);
-          console.log(1);
-          req.setRequestHeader('Content-Type', 'application/json');
-          req.send('{"sample": "Hello World"}');
-
+          
     }
+    // let req = new XMLHttpRequest();
+
+    //       req.open("POST", "http://localhost:3000/posts", true);
+    //       console.log(1);
+    //       req.setRequestHeader('Content-Type', 'application/json');
+    //       req.send('{"sample": "Hello World"}');
+
+    // }
 
     
 })
@@ -171,6 +199,25 @@ $("#noteSubmit").on("click", function() {
 
 
  localStorage.setItem(noteName, week);
+
+ console.log("Posting data now supposedly ba ba");
+
+ fetch("http://localhost:3000/posts",
+    {
+        method: "POST",
+        body: JSON
+        .stringify
+        ({
+          userId: 1,
+          title: "Ba Ba Ba",
+          completed: false,
+        }),
+        headers: {
+          "Content-type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 
 // console.log("ba ba ba");
 

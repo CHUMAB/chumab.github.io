@@ -1,0 +1,39 @@
+<button id="test" onclick="testPost()">TEST</button>
+<script>
+
+let testPost = () => {
+    console.log("pressed");
+
+    fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts",
+    {
+        method: "POST",
+        body: JSON
+        .stringify
+        ({
+          
+          "id": "OffNetwork",
+          "title": "randomNum",
+          "author": "Cam"
+
+        }),
+        headers: {
+          "Content-type": "application/json",
+          "Access-Control-Allow-Origin":"*",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+        
+}
+
+
+
+
+
+
+
+
+
+
+</script>
