@@ -2,43 +2,7 @@
 
 $(document).ready(function() {
 
-  // $(function() {
-  //   $("#accordion").accordion();
-  // });
 
-
-
-
-
-// console.log(localStorage.getItem("task"));
-
-// var savedTasks = {...localStorage};
-
-// console.table(savedTasks);
-
-// for (var i = 0; i < localStorage.length; i++){
-
-//     const key = localStorage.key(i);
-//     const value = localStorage.getItem(key)
-
-    // if ($.isNumeric(key)) {
-    //   $("#rightColumn").append(`<div class="card" style="width: 18rem;">
-    //     <div class="card-body" id="taskCard">
-    //       <h5 class="card-title"  id="taskName">`+ value +`</h5>
-    //       <p class="card-text `+ key +`" id="deleteTask">DELETE<label style="display: none;">`+ key +`</label></p>
-    //     </div>`);
-    // } else {
-
-//       $("#week"+ value +"").append(
-
-//         `<div id="note" class="col-2"><h5>`+ key +`</h5><p> overview text will go here </p></div>`
-      
-//        );
- 
-//     }
-
-
-// }
 console.log("before fetch");
 fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
             
@@ -50,18 +14,17 @@ fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                     console.log(json);
            
                     
-                  if ($.isNumeric(obj.title)) {
+                  if ($.isNumeric(obj.title)) {//this loop adds all the tasks
                         $("#rightColumn").append(`<div class="card" style="width: 18rem;">
                           <div class="card-body" id="taskCard">
                             <h5 class="card-title"  id="taskName">`+ obj.id +`</h5>
-                            <p class="card-text `+  +`" id="deleteTask">DELETE<label style="display: none;">`+  +`</label></p>
+                            <p class="card-text" id="deleteTask">DELETE</p>
                           </div>`);
                       } 
                     
                   })
                 }           
               );
-              console.log("after fetch");
 
 // makeCollapsibles();
 $("#addClass").on("mouseenter", function() {
@@ -154,14 +117,6 @@ $("#addClass").click(function() {//task adder both to site and JSON
 
           
     }
-    // let req = new XMLHttpRequest();
-
-    //       req.open("POST", "http://localhost:3000/posts", true);
-    //       console.log(1);
-    //       req.setRequestHeader('Content-Type', 'application/json');
-    //       req.send('{"sample": "Hello World"}');
-
-    // }
 
     
 })
