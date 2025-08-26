@@ -9,20 +9,65 @@ fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                 .then((response) => response.json())
                 .then((json) => {
 
+                  stringData = JSON.stringify(json);
+                  parseData = JSON.parse(stringData);
+
+                          $("#rightColumn").on("click", "#deleteTask", function(){
+
+                          $(this).parent().parent().remove();
+                          uniqueKey = $(this).children().text();
+
+                            $.each(json, function(idx, obj) {
+                              console.log(obj.title + ' ' + uniqueKey);
+
+                              titleString = JSON.stringify(obj.title)
+                              if (titleString === uniqueKey) {
+                                console.log(obj.id);
+                                console.log("Match!" + uniqueKey)
+                                const nameChange = {
+                                  title: "DELETED"
+                                }
+
+                                    // fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this will delete the data, leaving here for learning
+                                    //   method: "DELETE",
+                                      
+                                    //     })
+                                    //     .then(res => res.text())
+                                    //     .then(res => console.log(res))
+
+                                    fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
+                                      method: "PUT",
+                                      body: JSON.stringify(nameChange)
+                                      
+                                        })
+                                        .then(res => res.text())
+                                        .then(res => console.log(res))
+                                    
+
+                                                      }//end of if statement
+                                              }) //end of each statement
+                      })//end of click on delete button function                  
+
                   $.each(json, function(idx, obj) {//loop looks at all the saved tasks and adds all the valid ones to the task list
                     console.log(obj.id)
-                    console.log(json);
-           
+                    
                     
                   if ($.isNumeric(obj.title)) {//this loop adds all the tasks
                         $("#rightColumn").append(`<div class="card" style="width: 18rem;">
                           <div class="card-body" id="taskCard">
                             <h5 class="card-title"  id="taskName">`+ obj.id +`</h5>
-                            <p class="card-text" id="deleteTask">DELETE</p>
+                            <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ obj.title +`</label></p>
                           </div>`);
                       } 
+
+                      
                     
                   })
+                  console.table(parseData);
+                  console.log
+
+
+
                 }           
               );
 
@@ -129,13 +174,7 @@ $("#taskName").click(function() {
 })
 
 
-$("#rightColumn").on("click", "#deleteTask", function(){
 
-    $(this).parent().parent().remove();
-    uniqueKey = $(this).children().text();
-    console.log(uniqueKey);
-    localStorage.removeItem(uniqueKey);
-})
 
 $("body").on("click", "p#deleteTask", function(){
 
