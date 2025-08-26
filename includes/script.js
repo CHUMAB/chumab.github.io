@@ -16,30 +16,57 @@ var savedTasks = {...localStorage};
 
 console.table(savedTasks);
 
-for (var i = 0; i < localStorage.length; i++){
+// for (var i = 0; i < localStorage.length; i++){
 
-    const key = localStorage.key(i);
-    const value = localStorage.getItem(key)
+//     const key = localStorage.key(i);
+//     const value = localStorage.getItem(key)
 
-    if ($.isNumeric(key)) {
-      $("#rightColumn").append(`<div class="card" style="width: 18rem;">
-        <div class="card-body" id="taskCard">
-          <h5 class="card-title"  id="taskName">`+ value +`</h5>
-          <p class="card-text `+ key +`" id="deleteTask">DELETE<label style="display: none;">`+ key +`</label></p>
-        </div>`);
-    } else {
+    // if ($.isNumeric(key)) {
+    //   $("#rightColumn").append(`<div class="card" style="width: 18rem;">
+    //     <div class="card-body" id="taskCard">
+    //       <h5 class="card-title"  id="taskName">`+ value +`</h5>
+    //       <p class="card-text `+ key +`" id="deleteTask">DELETE<label style="display: none;">`+ key +`</label></p>
+    //     </div>`);
+    // } else {
 
-      $("#week"+ value +"").append(
+//       $("#week"+ value +"").append(
 
-        `<div id="note" class="col-2"><h5>`+ key +`</h5><p> overview text will go here </p></div>`
+//         `<div id="note" class="col-2"><h5>`+ key +`</h5><p> overview text will go here </p></div>`
       
-       );
+//        );
  
-    }
+//     }
 
 
-}
+// }
 
+fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
+            
+                .then((response) => response.json())
+                .then((json) => {
+
+                  $.each(json, function(idx, obj) {//loop looks at all the saved tasks and adds all the valid ones to the task list
+                    console.log(obj.id)
+                    console.log(json);
+           
+                    
+                  if ($.isNumeric(obj.title)) {
+                        $("#rightColumn").append(`<div class="card" style="width: 18rem;">
+                          <div class="card-body" id="taskCard">
+                            <h5 class="card-title"  id="taskName">`+ obj.id +`</h5>
+                            <p class="card-text `+  +`" id="deleteTask">DELETE<label style="display: none;">`+  +`</label></p>
+                          </div>`);
+                      } 
+                    
+                  })
+                }
+              
+              
+              
+              );
+
+
+                
 
 
 
@@ -80,7 +107,7 @@ $(".card").on("mouseleave", function() {
     
 });
 
-$("#addClass").click(function() {
+$("#addClass").click(function() {//task adder both to site and JSON
     console.log("click happening");
     let taskName = prompt("Enter Task Name");//name of the task
     taskName = taskName.toUpperCase();
@@ -99,7 +126,7 @@ $("#addClass").click(function() {
             
     console.log("pressed");
 
-            fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts",
+            fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts",//json POST to laptop
             {
                 method: "POST",
                 body: JSON
@@ -200,24 +227,7 @@ $("#noteSubmit").on("click", function() {
 
  localStorage.setItem(noteName, week);
 
- console.log("Posting data now supposedly ba ba");
 
- fetch("http://localhost:3000/posts",
-    {
-        method: "POST",
-        body: JSON
-        .stringify
-        ({
-          userId: 1,
-          title: "Ba Ba Ba",
-          completed: false,
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
 
 // console.log("ba ba ba");
 
