@@ -10,11 +10,11 @@ $(document).ready(function() {
 
 
 
-console.log(localStorage.getItem("task"));
+// console.log(localStorage.getItem("task"));
 
-var savedTasks = {...localStorage};
+// var savedTasks = {...localStorage};
 
-console.table(savedTasks);
+// console.table(savedTasks);
 
 // for (var i = 0; i < localStorage.length; i++){
 
@@ -39,7 +39,7 @@ console.table(savedTasks);
 
 
 // }
-
+console.log("before fetch");
 fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
             
                 .then((response) => response.json())
@@ -59,17 +59,9 @@ fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                       } 
                     
                   })
-                }
-              
-              
-              
+                }           
               );
-
-
-                
-
-
-
+              console.log("after fetch");
 
 // makeCollapsibles();
 $("#addClass").on("mouseenter", function() {
