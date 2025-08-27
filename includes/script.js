@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 console.log("before fetch");
-fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
+fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts")//json FETCH from laptop
             
                 .then((response) => response.json())
                 .then((json) => {
@@ -35,7 +35,7 @@ fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                                     //     .then(res => res.text())
                                     //     .then(res => console.log(res))
 
-                                    fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
+                                    fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
                                       method: "PUT",
                                       body: JSON.stringify(nameChange)
                                       
@@ -53,7 +53,7 @@ fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                     
                     
                   if ($.isNumeric(obj.title)) {//this loop adds all the tasks
-                        $("#rightColumn").append(`<div class="card" style="width: 18rem;">
+                        $("#rightColumn").append(`<div class="card sortable-item"">
                           <div class="card-body" id="taskCard">
                             <h5 class="card-title"  id="taskName">`+ obj.id +`</h5>
                             <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ obj.title +`</label></p>
@@ -126,7 +126,7 @@ $("#addClass").click(function() {//task adder both to site and JSON
             
     console.log("pressed");
 
-            fetch("https://0xq922d3.usw2.devtunnels.ms:3000/posts",//json POST to laptop
+            fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts",//json POST to laptop
             {
                 method: "POST",
                 body: JSON
@@ -148,7 +148,7 @@ $("#addClass").click(function() {//task adder both to site and JSON
     
             // $("#taskName").text(taskName);
     
-            $("#rightColumn").append(`<div class="card" style="width: 18rem;">
+            $("#rightColumn").append(`<div class="card"">
                 <div class="card-body" id="taskCard">
                   <h5 class="card-title"  id="taskName">`+ taskName +`</h5>
                   <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ randomNum +`</label></p>

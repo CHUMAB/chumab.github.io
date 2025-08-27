@@ -44,9 +44,7 @@ footer {
 
 
 
-#classesHolder {
-    width: 20vw;
-}
+
 
  /* Style the button that is used to open and close the collapsible content */
  .collapsible {
@@ -73,11 +71,16 @@ footer {
     background-color: #f1f1f1;
   } 
 
+  #classesHolder {
+
+  }
+
   #rightColumn {
     border: #eee;
     border-style: solid;
     padding-bottom: 10px;
-    width: 18vw;
+
+    
   }
 
   .middleColumn {
