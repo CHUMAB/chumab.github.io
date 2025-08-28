@@ -361,7 +361,7 @@ toggleNotes = () => {
 
 }
 
-$("#class1Click").on("click", function() {
+$("#class1Click, #class1Click2").on("click", function() {
   $("#class1").show();
   $("#class2").hide();
   $("#class3").hide();
@@ -369,8 +369,8 @@ $("#class1Click").on("click", function() {
   $("#class5").hide();
 
   $("#notesHolder").css("background-color", "rgb(116, 13, 13)");
-  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(116, 13, 13)");
-  $(".middleColumn").css("background-color", "rgb(116, 13, 13)");
+  // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(116, 13, 13)");
+  // $(".middleColumn").css("background-color", "rgb(116, 13, 13)");
 
   $("#syllabus1").show();
   $("#syllabus2").hide();
@@ -379,7 +379,7 @@ $("#class1Click").on("click", function() {
   $("#syllabus5").hide();
 })
 
-$("#class2Click").on("click", function() {
+$("#class2Click, #class2Click2").on("click", function() {
   $("#class1").hide();
   $("#class2").show();
   $("#class3").hide();
@@ -387,8 +387,8 @@ $("#class2Click").on("click", function() {
   $("#class5").hide();
 
   $("#notesHolder").css("background-color", "rgb(192, 83, 176)");
-  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(192, 83, 176)");
-  $(".middleColumn").css("background-color", "rgb(192, 83, 176)");
+  // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(192, 83, 176)");
+  // $(".middleColumn").css("background-color", "rgb(192, 83, 176)");
 
   $("#syllabus1").show();
   $("#syllabus2").hide();
@@ -398,7 +398,7 @@ $("#class2Click").on("click", function() {
 
 })
 
-$("#class3Click").on("click", function() {
+$("#class3Click, #class3Click2").on("click", function() {
   $("#class1").hide();
   $("#class2").hide();
   $("#class3").show();
@@ -417,7 +417,7 @@ $("#class3Click").on("click", function() {
 
 })
 
-$("#class4Click").on("click", function() {
+$("#class4Click, #class4Click2").on("click", function() {
   $("#class1").hide();
   $("#class2").hide();
   $("#class3").hide();
@@ -436,7 +436,7 @@ $("#class4Click").on("click", function() {
 
 })
 
-$("#class5Click").on("click", function() {
+$("#class5Click, #class5Click2").on("click", function() {
   $("#class1").hide();
   $("#class2").hide();
   $("#class3").hide();
@@ -495,6 +495,19 @@ currentGrade = parseInt(val1) + parseInt(val2) + parseInt(val3) + parseInt(val4)
 
 })
 
+$(".linkD2l").on("click", function() {
+  window.open("https://online.camosun.ca/d2l/home");
+})
+
+$(".linkD2l").on("mouseenter", function() {
+    $(this).css('cursor','pointer');
+    $(this).css('background-color','orange');
+})
+
+$(".linkD2l").on("mouseleave", function() {
+    $(this).css('cursor','pointer');
+    $(this).css('background-color','rgb(17, 145, 0)');
+})
 
 })
 

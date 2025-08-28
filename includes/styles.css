@@ -12,13 +12,14 @@ a.nav-link, a.navbar-brand {
     color: white; 
 }
 section {
-    background-color: #212f99;
+    background-color: #2c2d35;
     width: 100vw;
 }
 
 footer {
     background-color: #646A9B;
     color: white;
+    margin-top: 100px;
 }
 
 .footer-text {
@@ -71,16 +72,33 @@ footer {
     background-color: #f1f1f1;
   } 
 
-  #classesHolder {
-
+  #bodyHolder {
+    width: 100vw;
   }
 
-  #rightColumn {
+  #colortestingshh {
+    color: rgb(10, 85, 0);
+  }
+
+  .linkD2l {
+    background-color: rgb(17, 145, 0);
+  }
+
+  #link {
+   border: #eee;
+    border-style: solid; 
+    border-width: 2px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+  }
+
+  #classesHolder {
     border: #eee;
     border-style: solid;
     padding-bottom: 10px;
-
-    
+    padding-top: 10px;
+    background-color: #2736a4;
   }
 
   .middleColumn {
@@ -91,8 +109,23 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    background-color: #2736a4;
+  }
 
+  #rightColumn {
+    border: #eee;
+    border-style: solid;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    background-color: #2736a4;
+  }
+
+  #linkHolder {
+    width: 100vw;
+    justify-content: center;  
+    margin-bottom: 10px;
+    padding-top: 10px;
   }
 
   #classListTitle {
@@ -115,10 +148,14 @@ footer {
     
   }
 
+  #smallButton {
+
+  }
+
   #deleteTask {
     color: white;
-    width: 30%;
-    margin-left: 70%;
+    width: 60px;
+    margin-left: 1%;
     text-align: center;
     border: #eee;
     border-style: solid;

@@ -70,41 +70,55 @@
     </nav>
 <section>
 
-<div class="row align-items-start">
+  <div id="linkHolder" class="row">
+      <div id="link" class="linkD2l col-1 mx-2">D2L</div>
+      <div href="https://online.camosun.ca/d2l/home" id="link" class="col-1 mx-2">MyCamosun</div>
+      <div id="link" class="col-1 mx-2">GitHub</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      <div id="link" class="col-1 mx-2">1</div>
+      
+    </div>
 
-<div id="classesHolder" class="container-fluid col-lg-2 col-md-10 col-12 sortable-list">
+<div class="bodyHolder row align-items-start">
+
+<div id="classesHolder" class="container-fluid col-lg-2 col-md-10 col-10 sortable-list">
 
 <div id="class1Click" class="card sortable-item border-light" style="background-color: rgb(116, 13, 13);" draggable="true">
   <div class="card-body">
-    <h5 class="card-title" id="className">Class1</h5>
+    <h5 class="card-title" id="className">ICS-211 - Web Applications</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
-    <a href="#" class="btn btn-primary" id="notesAdd1">NotesEtc</a>
+    <!-- <a href="#" class="btn btn-primary" id="notesAdd1">NotesEtc</a> -->
   </div>
 </div>
 
 
 <div id="class2Click" class="card sortable-item border-light" style="background-color: rgb(192, 83, 176);">
   <div class="card-body">
-    <h5 class="card-title" id="className">Class2</h5>
+    <h5 class="card-title" id="className">COMP-276 - Data Security</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
-    <a href="#" class="btn btn-primary" id="notesAdd1">NotesEtc</a>
+    <!-- <a href="#" class="btn btn-primary" id="notesAdd1">NotesEtc</a> -->
   </div>
 </div>
 
 
 <div id="class3Click" class="card sortable-item border-light" style="background-color: rgb(59, 132, 149);" draggable="true">
   <div class="card-body">
-    <h5 class="card-title" id="className">Class3</h5>
+    <h5 class="card-title" id="className">ICS-212 - Database Systems Management</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
-    <a href="#" class="btn btn-primary">NotesEtc</a>
+    <!-- <a href="#" class="btn btn-primary">NotesEtc</a> -->
   </div>
 </div>
 
 <div id="class4Click" class="card sortable-item border-light" style="background-color: rgb(3, 101, 139);" draggable="true">
   <div class="card-body">
-    <h5 class="card-title" id="className">Class4</h5>
+    <h5 class="card-title" id="className">BUS-280 - Entrepreneruship</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
-    <a href="#" class="btn btn-primary">NotesEtc</a>
+    <!-- <a href="#" class="btn btn-primary">NotesEtc</a> -->
   </div>
 </div>
 
@@ -112,7 +126,7 @@
   <div class="card-body">
     <h5 class="card-title" id="className">Class5</h5>
     <p class="card-text" id="classInfo">Quick Info</p>
-    <a href="#" class="btn btn-primary">NotesEtc</a>
+    <!-- <a href="#" class="btn btn-primary">NotesEtc</a> -->
   </div>
 </div>
 
@@ -120,13 +134,21 @@
 
 
 
-<div id="accordion" class="container-fluid middleColumn col-lg-7 col-md-12 col-sm-7">
+<div id="accordion" class="container-fluid middleColumn col-lg-7 col-md-10 col-12">
+    
   <div class="middleColumn">Calendar</div>
 <div class="content">
-  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showPrint=0&src=Y2FtLndhdHQwN0BnbWFpbC5jb20&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe class="d-sm-none d-lg-inline" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showPrint=0&src=Y2FtLndhdHQwN0BnbWFpbC5jb20&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 <div class="middleColumn" id="">Note Writing</div> 
 <div id="notesHolder" class="content">
+    <div id="buttonsHolder" class="row align-items-start">
+      <div id="class1Click2" class="smallButton col-2">CLASS 1</div>
+      <div id="class2Click2" class="smallButton col-2">CLASS 2</div>
+      <div id="class3Click2" class="smallButton col-2">CLASS 3</div>
+      <div id="class4Click2" class="smallButton col-2">CLASS 4</div>
+      <div id="class5Click2" class="smallButton col-2">CLASS 5</div>
+    </div>
   <div id="class1" style="display: none;">
     <iframe src="https://docs.google.com/document/d/1MS5XrN5s88pLFqu1VCdpKscENPvptRVLFI5ve5PWLVM/edit?usp=sharing"></iframe>    
   </div>
@@ -220,7 +242,6 @@
 
 
 </div>
-
 
 <div id="rightColumn" class="container-fluid col-lg-2 col-md-10 col-10 ">
 <h2 id="classListTitle">TASK LIST</h2>
