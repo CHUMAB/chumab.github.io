@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 console.log("before fetch");
-fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts")//json FETCH from laptop
+fetch("https://7149jx1v.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
             
                 .then((response) => response.json())
                 .then((json) => {
@@ -35,7 +35,7 @@ fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts")//json FETCH from laptop
                                     //     .then(res => res.text())
                                     //     .then(res => console.log(res))
 
-                                    fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
+                                    fetch("https://7149jx1v.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
                                       method: "PUT",
                                       body: JSON.stringify(nameChange)
                                       
@@ -46,7 +46,7 @@ fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts")//json FETCH from laptop
 
                                                       }//end of if statement
                                               }) //end of each statement
-                      })//end of click on delete button function                  
+                      })//end of click on delete button function   
 
                   $.each(json, function(idx, obj) {//loop looks at all the saved tasks and adds all the valid ones to the task list
                     console.log(obj.id)
@@ -56,9 +56,19 @@ fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts")//json FETCH from laptop
                         $("#rightColumn").append(`<div class="card sortable-item"">
                           <div class="card-body" id="taskCard">
                             <h5 class="card-title"  id="taskName">`+ obj.id +`</h5>
+                            <h6 class="card-title" id="dueDate">DUE: `+ obj.dueDate +`</h6>
                             <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ obj.title +`</label></p>
                           </div>`);
-                      } 
+                      } else if (obj.title === "DELETED") {//this code just displays how many tasks are DELETED
+                        completed = $("#completedNumber").text();//code doesnt account for other reasons i deleted them but shhh
+                        completed = Number(completed);
+                        completed = completed + 1;
+                        $("#completedNumber").text(completed);
+                        console.log(completed);
+
+                      }
+                    
+                  
 
                       
                     
@@ -111,6 +121,8 @@ $("#addClass").click(function() {//task adder both to site and JSON
     console.log("click happening");
     let taskName = prompt("Enter Task Name");//name of the task
     taskName = taskName.toUpperCase();
+    let dueDate = prompt("Enter due date - format: Day/Date/Time");
+    
 
 
     if (taskName === null) {
@@ -126,7 +138,7 @@ $("#addClass").click(function() {//task adder both to site and JSON
             
     console.log("pressed");
 
-            fetch("https://8mnjh42d.usw2.devtunnels.ms:8000/posts",//json POST to laptop
+            fetch("https://7149jx1v.usw2.devtunnels.ms:3000/posts",//json POST to laptop
             {
                 method: "POST",
                 body: JSON
@@ -135,6 +147,7 @@ $("#addClass").click(function() {//task adder both to site and JSON
                   
                   "id": taskName,
                   "title": randomNum,
+                  "dueDate": dueDate,
                   "author": "Cam"
 
                 }),
@@ -150,7 +163,8 @@ $("#addClass").click(function() {//task adder both to site and JSON
     
             $("#rightColumn").append(`<div class="card"">
                 <div class="card-body" id="taskCard">
-                  <h5 class="card-title"  id="taskName">`+ taskName +`</h5>
+                  <h5 class="card-title" id="taskName">`+ taskName +`</h5>
+                  <h6 class="card-title" id="dueDate">DUE: `+ dueDate +`</h6>
                   <p class="card-text" id="deleteTask">DELETE<label style="display: none;">`+ randomNum +`</label></p>
                 </div>`);
 
@@ -455,9 +469,9 @@ $("#class5Click, #class5Click2").on("click", function() {
 
 })
 
-$("#gradeSubmit1").on("click", function() {
+$("#gradeSubmit1").submit(function(e) {
 
-
+e.preventDefault();
   
 
   val1 = $("#desc1").val();
@@ -491,23 +505,52 @@ currentGrade = parseInt(val1) + parseInt(val2) + parseInt(val3) + parseInt(val4)
   var dAndt = (strDate +` / `+ time);
   console.log(dAndt);
 
-  $("#lastUpdated").text(`Last Updated: `+dAndt);
+  // $("#lastUpdated").text(`Last Updated: `+dAndt);
 
 })
 
-$(".linkD2l").on("click", function() {
+
+
+$("#link, .linkD2l, .linkMyCamosun, .linkGitHub").on("mouseenter", function() {
+    $(this).css('cursor','pointer');
+    $(this).css("border-color","rgb(174, 115, 26)");
+    $(this).css("font-color","rgb(174, 115, 26)")
+    $(this).css("box-shadow","4px 4px black");
+})
+
+$("#link, .linkD2l, .linkMyCamosun, .linkGitHub").on("mouseleave", function() {
+    $(this).css('cursor','pointer');
+    $(this).css("border-color","white");
+    $(this).css("box-shadow","0px 0px");
+
+})
+
+$(".card").on("mouseenter", function() {
+    $(this).css("border-color","rgb(174, 115, 26)");
+})
+
+$(".card").on("mouseleave", function() {
+  $(this).css("margin-top","5px");
+})
+
+$(".linkD2l").on("click", function() {//reuseable code for all the top links
   window.open("https://online.camosun.ca/d2l/home");
 })
 
-$(".linkD2l").on("mouseenter", function() {
-    $(this).css('cursor','pointer');
-    $(this).css('background-color','orange');
+$(".linkMyCamosun").on("click", function() {//reuseable code for all the top links
+  window.open("https://colss-prod.ec.camosun.ca/Student/?hideProxyDialog=false");
 })
 
-$(".linkD2l").on("mouseleave", function() {
-    $(this).css('cursor','pointer');
-    $(this).css('background-color','rgb(17, 145, 0)');
+$(".linkGitHub").on("click", function() {//reuseable code for all the top links
+  window.open("https://github.com/CHUMAB");
 })
+
+$(".linkTest").on("click", function() {//reuseable code for all the top links
+  window.open("https://colss-prod.ec.camosun.ca/Student/?hideProxyDialog=false");
+})
+
+
+
 
 })
 

@@ -41,6 +41,7 @@ footer {
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
+    box-shadow: 5px 5px black;
 }
 
 
@@ -77,11 +78,15 @@ footer {
   }
 
   #colortestingshh {
-    color: rgb(10, 85, 0);
+    color: rgb(174, 115, 26);
   }
 
   .linkD2l {
     background-color: rgb(17, 145, 0);
+  }
+
+  .linkMyCamosun {
+    background-color: rgb(9, 77, 0);
   }
 
   #link {
@@ -91,14 +96,19 @@ footer {
     border-radius: 5px;
     text-align: center;
     color: white;
+    /* font-size: 3vw; */
+    text-align: center;
   }
 
   #classesHolder {
     border: #eee;
     border-style: solid;
+    border-radius: 5px;
     padding-bottom: 10px;
     padding-top: 10px;
+    margin-bottom: 10px;
     background-color: #2736a4;
+    box-shadow: 5px 5px black;
   }
 
   .middleColumn {
@@ -111,14 +121,17 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #2736a4;
+    box-shadow: 5px 5px black;
   }
 
   #rightColumn {
     border: #eee;
     border-style: solid;
+    border-radius: 5px;
     padding-bottom: 50px;
     padding-top: 10px;
     background-color: #2736a4;
+    box-shadow: 5px 5px black;
   }
 
   #linkHolder {
@@ -135,13 +148,26 @@ footer {
   #addClass {
     color: white;
     background-color: rgb(12, 47, 47);
-    width: 50%;
+    width: 70%;
     border: #eee;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
     text-align: center;
 
+  }
+
+  #completed {
+    color: white;
+    width: 5%;
+        display: inline;
+
+  }
+
+  #completedNumber {
+    width: 5%;
+    display: inline;
+    color: white;
   }
 
   #classListTitle {
@@ -166,7 +192,7 @@ footer {
 
   #taskCard {
     color: white;
-    background-color: rgb(144, 84, 5);
+    background-color: rgb(19, 17, 137);
     border: #eee;
     border-style: solid;
     border-width: 2px;
@@ -297,4 +323,30 @@ pre {
     border-style: solid;
     border-width: 5px;
     border-radius: 5px; 
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    color: black;
+  }
+
+
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    #link {
+   border: #eee;
+    border-style: solid; 
+    border-width: 2px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+  }
 }
