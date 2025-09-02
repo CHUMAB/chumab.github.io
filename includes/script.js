@@ -383,6 +383,8 @@ $("#class1Click, #class1Click2").on("click", function() {
   $("#class5").hide();
 
   $("#notesHolder").css("background-color", "rgb(116, 13, 13)");
+  $("#syllabusHolder").css("background-color", "rgb(116, 13, 13)");
+
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(116, 13, 13)");
   // $(".middleColumn").css("background-color", "rgb(116, 13, 13)");
 
@@ -400,7 +402,9 @@ $("#class2Click, #class2Click2").on("click", function() {
   $("#class4").hide();
   $("#class5").hide();
 
-  $("#notesHolder").css("background-color", "rgb(192, 83, 176)");
+  $("#notesHolder").css("background-color", "rgb(58, 20, 83)");
+  $("#syllabusHolder").css("background-color", "rgb(58, 20, 83)");
+
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(192, 83, 176)");
   // $(".middleColumn").css("background-color", "rgb(192, 83, 176)");
 
@@ -419,9 +423,11 @@ $("#class3Click, #class3Click2").on("click", function() {
   $("#class4").hide();
   $("#class5").hide();
 
-  $("#notesHolder").css("background-color", "rgb(59, 132, 149)");
-  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(59, 132, 149)");
-  $(".middleColumn").css("background-color", "rgb(59, 132, 149)");
+  $("#notesHolder").css("background-color", "rgb(21, 72, 30)");
+  $("#syllabusHolder").css("background-color", "rgb(21, 72, 30)");
+
+  // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(59, 132, 149)");
+  // $(".middleColumn").css("background-color", "rgb(59, 132, 149)");
 
   $("#syllabus1").show();
   $("#syllabus2").hide();
@@ -438,9 +444,11 @@ $("#class4Click, #class4Click2").on("click", function() {
   $("#class4").show();
   $("#class5").hide();
 
-  $("#notesHolder").css("background-color", "rgb(3, 101, 139)");
-  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(3, 101, 139)");
-  $(".middleColumn").css("background-color", "rgb(3, 101, 139)");
+  $("#notesHolder").css("background-color", "rgb(24, 35, 87)");
+  $("#syllabusHolder").css("background-color", "rgb(24, 35, 87)");
+
+  // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(3, 101, 139)");
+  // $(".middleColumn").css("background-color", "rgb(3, 101, 139)");
 
   $("#syllabus1").show();
   $("#syllabus2").hide();
@@ -457,9 +465,10 @@ $("#class5Click, #class5Click2").on("click", function() {
   $("#class4").hide();
   $("#class5").show();
 
-  $("#notesHolder").css("background-color", "rgb(176, 129, 11)");
-  $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(176, 129, 11)");
-  $(".middleColumn").css("background-color", "rgb(176, 129, 11)");
+  $("#notesHolder").css("background-color", "rgb(109, 69, 37)");
+  $("#syllabusHolder").css("background-color", "rgb(109, 69, 37)");
+  // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(176, 129, 11)");
+  // $(".middleColumn").css("background-color", "rgb(176, 129, 11)");
 
   $("#syllabus1").show();
   $("#syllabus2").hide();
