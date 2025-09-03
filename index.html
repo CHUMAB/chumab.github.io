@@ -141,13 +141,13 @@
   <iframe class="d-sm-none d-lg-inline" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FVancouver&showPrint=0&src=Y2FtLndhdHQwN0BnbWFpbC5jb20&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 <div class="middleColumn  my-2" id="">Note Writing</div> 
-<div id="notesHolder" class="content">
-    <div id="buttonsHolder" class="row align-items-start">
-      <div id="class1Click2" class="smallButton col-2">CLASS 1</div>
-      <div id="class2Click2" class="smallButton col-2">CLASS 2</div>
-      <div id="class3Click2" class="smallButton col-2">CLASS 3</div>
-      <div id="class4Click2" class="smallButton col-2">CLASS 4</div>
-      <div id="class5Click2" class="smallButton col-2">CLASS 5</div>
+<div id="notesHolder" class="content" style="background-color: rgb(65, 64, 64);">
+    <div id="buttonsHolder" class="row justify-content-center mb-3">
+      <div id="class1Click2" class="smallButton col-2 mx-4" style="background-color: rgb(87, 25, 25);">ICS-211</div>
+      <div id="class2Click2" class="smallButton col-2 mx-4" style="background-color: rgb(58, 20, 83);">COMP-276</div>
+      <div id="class3Click2" class="smallButton col-2 mx-4" style="background-color: rgb(21, 72, 30);">ICS-212</div>
+      <div id="class4Click2" class="smallButton col-2 mx-4" style="background-color: rgb(24, 35, 87);">BUS-280</div>
+      <div id="class5Click2" class="smallButton col-2 mx-4" style="background-color: rgb(109, 69, 37);"></div>
     </div>
   <div id="class1" style="display: none;">
     <iframe src="https://docs.google.com/document/d/1MS5XrN5s88pLFqu1VCdpKscENPvptRVLFI5ve5PWLVM/edit?usp=sharing"></iframe>    
@@ -187,11 +187,47 @@
   </div>
   </div>
 
-  <div class="middleColumn grades">Grades</div>
-   <div id="gradesHolder" class="content">
-    <h1 id="className">CLASS NAME</h1>
+  <div class="middleColumn grades container">Slides</div>
+   <div id="slidesHolder" class="row justify-content-center" style="background-color: rgb(65, 64, 64);">
+    
+      <div id="class1Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 1</div>
+      <div id="class2Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 2</div>
+      <div id="class3Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 3</div>
+      <div id="class4Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 4</div>
+    <div class="w-100 h-0"></div>
+      <div id="class5Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 5</div>
+      <div id="class5Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 5</div>
+      <div id="class5Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 5</div>
+      <div id="class5Click2" class="slidesButton col-3 mx-4" style="background-color: rgb(87, 25, 25);">Slides 5</div>
 
-    <form id="grades1">
+</div>
+
+
+
+</div>
+
+<div id="rightColumn" class="container-fluid col-lg-2 col-md-10 col-10 ">
+<h2 id="classListTitle">TASK LIST</h2>
+<h3 id="addClass">ADD TASK</h3>
+<h5 id="completed">TASKS COMPLETED: <h5 id="completedNumber">0</h5></h5>
+</div>
+
+</div>
+
+
+    <div id="footer" class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top fixed-bottom">
+        <div class="col-md-4 d-flex align-items-center footer-text">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary footer-span">Very cool</span>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- <form id="grades1"> old grades code might reuse later
       
       <div  class="row"  id="row1">
         <label for="desc1">labs</label>
@@ -229,42 +265,7 @@
       
       
       <button id="gradeSubmit1" type="submit">SUBMIT</button>
-
-
-
-
-
-    </form>
-
-
-
-   </div>
-
-
-</div>
-
-<div id="rightColumn" class="container-fluid col-lg-2 col-md-10 col-10 ">
-<h2 id="classListTitle">TASK LIST</h2>
-<h3 id="addClass">ADD TASK</h3>
-<h5 id="completed">TASKS COMPLETED: <h5 id="completedNumber">0</h5></h5>
-</div>
-
-</div>
-
-
-    <div id="footer" class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top fixed-bottom">
-        <div class="col-md-4 d-flex align-items-center footer-text">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-body-secondary footer-span">Very cool</span>
-        </div>
-      </footer>
-    </div>
-
-
-
+           </form> -->
     </body>
 
 

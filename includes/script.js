@@ -382,8 +382,8 @@ $("#class1Click, #class1Click2").on("click", function() {
   $("#class4").hide();
   $("#class5").hide();
 
-  $("#notesHolder").css("background-color", "rgb(116, 13, 13)");
-  $("#syllabusHolder").css("background-color", "rgb(116, 13, 13)");
+  $("#notesHolder").css("background-color", "rgb(87, 25, 25)");
+  $("#syllabusHolder").css("background-color", "rgb(87, 25, 25)");
 
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(116, 13, 13)");
   // $(".middleColumn").css("background-color", "rgb(116, 13, 13)");
@@ -408,8 +408,8 @@ $("#class2Click, #class2Click2").on("click", function() {
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(192, 83, 176)");
   // $(".middleColumn").css("background-color", "rgb(192, 83, 176)");
 
-  $("#syllabus1").show();
-  $("#syllabus2").hide();
+  $("#syllabus1").hide();
+  $("#syllabus2").show();
   $("#syllabus3").hide();
   $("#syllabus4").hide();
   $("#syllabus5").hide();
@@ -429,9 +429,9 @@ $("#class3Click, #class3Click2").on("click", function() {
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(59, 132, 149)");
   // $(".middleColumn").css("background-color", "rgb(59, 132, 149)");
 
-  $("#syllabus1").show();
+  $("#syllabus1").hide();
   $("#syllabus2").hide();
-  $("#syllabus3").hide();
+  $("#syllabus3").show();
   $("#syllabus4").hide();
   $("#syllabus5").hide();
 
@@ -450,10 +450,10 @@ $("#class4Click, #class4Click2").on("click", function() {
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(3, 101, 139)");
   // $(".middleColumn").css("background-color", "rgb(3, 101, 139)");
 
-  $("#syllabus1").show();
+  $("#syllabus1").hide();
   $("#syllabus2").hide();
   $("#syllabus3").hide();
-  $("#syllabus4").hide();
+  $("#syllabus4").show();
   $("#syllabus5").hide();
 
 })
@@ -470,53 +470,54 @@ $("#class5Click, #class5Click2").on("click", function() {
   // $(".ui-accordion-header.ui-state-active").css("background-color", "rgb(176, 129, 11)");
   // $(".middleColumn").css("background-color", "rgb(176, 129, 11)");
 
-  $("#syllabus1").show();
+  $("#syllabus1").hide();
   $("#syllabus2").hide();
   $("#syllabus3").hide();
   $("#syllabus4").hide();
-  $("#syllabus5").hide();
+  $("#syllabus5").show();
 
 })
 
-$("#gradeSubmit1").submit(function(e) {
+// $("#gradeSubmit1").submit(function(e) {
 
-e.preventDefault();
+// e.preventDefault();
   
 
-  val1 = $("#desc1").val();
-  val2 = $("#desc2").val();
-  val3 = $("#desc3").val();
-  val4 = $("#desc4").val();
-  val5 = $("#desc5").val();
+//   val1 = $("#desc1").val();
+//   val2 = $("#desc2").val();
+//   val3 = $("#desc3").val();
+//   val4 = $("#desc4").val();
+//   val5 = $("#desc5").val();
 
-  $("#desc1Total").text(val1);
-  $("#desc2Total").text(val2);
-  $("#desc3Total").text(val3);
-  $("#desc4Total").text(val4);
-  $("#desc5Total").text(val5);
+//   $("#desc1Total").text(val1);
+//   $("#desc2Total").text(val2);
+//   $("#desc3Total").text(val3);
+//   $("#desc4Total").text(val4);
+//   $("#desc5Total").text(val5);
 
-  $("#desc1").addClass(val1);
-  $("#desc2").addClass(val2);
-  $("#desc3").addClass(val3);
-  $("#desc4").addClass(val4);
-  $("#desc5").addClass(val5);
+//   $("#desc1").addClass(val1);
+//   $("#desc2").addClass(val2);
+//   $("#desc3").addClass(val3);
+//   $("#desc4").addClass(val4);
+//   $("#desc5").addClass(val5);
 
-currentGrade = parseInt(val1) + parseInt(val2) + parseInt(val3) + parseInt(val4) + parseInt(val5);
+// currentGrade = parseInt(val1) + parseInt(val2) + parseInt(val3) + parseInt(val4) + parseInt(val5);
 
-  $("#currentGrade").text(currentGrade);
+//   $("#currentGrade").text(currentGrade);
 
- const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-   var d = new Date();
-  var strDate = (monthNames[d.getMonth()]) + " / " + d.getDate();
-  var time = d.toLocaleTimeString();
-  var dAndt = (strDate +` / `+ time);
-  console.log(dAndt);
+//  const monthNames = ["January", "February", "March", "April", "May", "June",
+//     "July", "August", "September", "October", "November", "December"
+//   ];
+//    var d = new Date();
+//   var strDate = (monthNames[d.getMonth()]) + " / " + d.getDate();
+//   var time = d.toLocaleTimeString();
+//   var dAndt = (strDate +` / `+ time);
+//   console.log(dAndt);
 
-  // $("#lastUpdated").text(`Last Updated: `+dAndt);
+//   // $("#lastUpdated").text(`Last Updated: `+dAndt);
 
-})
+// })
+
 
 
 
@@ -528,6 +529,20 @@ $("#link, .linkD2l, .linkMyCamosun, .linkGitHub").on("mouseenter", function() {
 })
 
 $("#link, .linkD2l, .linkMyCamosun, .linkGitHub").on("mouseleave", function() {
+    $(this).css('cursor','pointer');
+    $(this).css("border-color","white");
+    $(this).css("box-shadow","0px 0px");
+
+})
+
+$(".smallButton").on("mouseenter", function() {
+    $(this).css('cursor','pointer');
+    $(this).css("border-color","rgb(174, 115, 26)");
+    $(this).css("font-color","rgb(174, 115, 26)")
+    $(this).css("box-shadow","4px 4px black");
+})
+
+$(".smallButton").on("mouseleave", function() {
     $(this).css('cursor','pointer');
     $(this).css("border-color","white");
     $(this).css("box-shadow","0px 0px");

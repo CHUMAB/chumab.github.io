@@ -134,6 +134,30 @@ footer {
     box-shadow: 5px 5px black;
   }
 
+  .smallButton {
+    border: #eee;
+    border-style: solid;
+    border-radius: 50%;
+    color: white;
+    width: 85px;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .slidesButton {
+    border: #eee;
+    border-style: solid;
+    border-radius: 50%;
+    color: white;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
   #linkHolder {
     width: 100vw;
     justify-content: center;  
