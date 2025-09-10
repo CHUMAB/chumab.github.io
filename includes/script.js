@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
 console.log("before fetch");
-fetch("https://5v236mrs.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
+fetch("https://d80t87hm.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
             
                 .then((response) => response.json())
                 .then((json) => {
@@ -35,7 +35,7 @@ fetch("https://5v236mrs.usw2.devtunnels.ms:3000/posts")//json FETCH from laptop
                                     //     .then(res => res.text())
                                     //     .then(res => console.log(res))
 
-                                    fetch("https://5v236mrs.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
+                                    fetch("https://d80t87hm.usw2.devtunnels.ms:3000/posts/" + obj.id, {//this changes the "randomNum" to "DELETED" so it no longer loads
                                       method: "PUT",
                                       body: JSON.stringify(nameChange)
                                       
@@ -138,7 +138,7 @@ $("#addClass").click(function() {//task adder both to site and JSON
             
     console.log("pressed");
 
-            fetch("https://5v236mrs.usw2.devtunnels.ms:3000/posts",//json POST to laptop
+            fetch("https://d80t87hm.usw2.devtunnels.ms:3000/posts",//json POST to laptop
             {
                 method: "POST",
                 body: JSON
@@ -577,5 +577,6 @@ $(".linkTest").on("click", function() {//reuseable code for all the top links
 
 
 })
+
 
 
